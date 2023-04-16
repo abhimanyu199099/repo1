@@ -66,10 +66,12 @@ def listener():
 if __name__ == '__main__':
     listener()
 
+#getting linear accn values to work on from imu    
 linacx = Imu.linear_acceleration.x
 linacy = Imu.linear_acceleration.y
 linacz = Imu.linear_acceleration.z
 
+#getting angular acceleration values to work on from imu
 angacx = Imu.angular_acceleration.x
 angacy = Imu.angular_acceleration.y
 angacz = Imu.angular_acceleration.z
@@ -85,12 +87,14 @@ def talker():
         # loop of sorts, it will increment at 50hz till we get the req values at the 10s mark
         lininc = 0.005
         anginc = 0.02
-
+        
+        #incrementing values
         linacx += lininc
         angacz += anginc
         
         newdata = Float64MultiArray() #imu data is published this way
-
+        
+        #new values of accn
         d = [[linacx, linacy, linacz], [angacx, angacy, angacz]]
 
         newdata.data = d
