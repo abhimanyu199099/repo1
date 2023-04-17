@@ -7,8 +7,9 @@ and angular acceleration about them. this will be in put in a subscriber node. t
 from the subcriber node and increment the linear and angular acceleration at a constant rate.
 then we publish it to the publisher.'''
 
-''' also checked out using odom and twist packages for the same, but couldnt really get the hang of it
+''' also checked out using odom and twist packages for the same, and sensor_msgs but couldnt really get the hang of it
 so i just divided the total increment by the time and my publishing rate'''
+
 
 ''' setup of the imu sensor'''
 import os # Miscellaneous operating system interface
